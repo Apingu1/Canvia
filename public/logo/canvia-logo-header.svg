@@ -1,25 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 150" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1045 310" role="img" aria-labelledby="title desc">
   <title id="title">Canvia</title>
   <desc id="desc">Canvia wordmark with three-leaf icon.</desc>
   <defs>
-    <linearGradient id="wordGradient" x1="0" y1="0" x2="760" y2="150" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0f473b" />
-      <stop offset="0.48" stop-color="#113d34" />
-      <stop offset="1" stop-color="#0a2f28" />
+    <linearGradient id="wordGradient" x1="0" y1="80" x2="1045" y2="290" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#063d35" />
+      <stop offset="0.45" stop-color="#0c453a" />
+      <stop offset="1" stop-color="#072f2a" />
     </linearGradient>
-    <linearGradient id="leafGradient" x1="520" y1="0" x2="660" y2="120" gradientUnits="userSpaceOnUse">
+    <linearGradient id="leafGradient" x1="700" y1="0" x2="895" y2="135" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#a4bf82" />
-      <stop offset="0.58" stop-color="#6f945f" />
-      <stop offset="1" stop-color="#294f3f" />
+      <stop offset="0.52" stop-color="#789b61" />
+      <stop offset="1" stop-color="#31583f" />
     </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#001f19" flood-opacity="0.32" />
+    </filter>
   </defs>
-  <rect width="760" height="150" fill="none" />
-  <g stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round" opacity="0.98">
-    <text x="14" y="116" font-family="Inter, Montserrat, Arial, sans-serif" font-size="106" font-weight="300" letter-spacing="35" fill="url(#wordGradient)">CANVIA</text>
+  <rect width="1045" height="310" fill="none" />
+  <g font-family="Montserrat, Inter, Arial, sans-serif" font-size="188" font-weight="300" fill="url(#wordGradient)" stroke="#ffffff" stroke-width="3.2" paint-order="stroke" stroke-linejoin="round" filter="url(#shadow)">
+    <text x="24" y="270">C</text>
+    <text x="215" y="270">A</text>
+    <text x="395" y="270">N</text>
+    <text x="590" y="270">V</text>
+    <text x="755" y="270">I</text>
+    <text x="875" y="270">A</text>
   </g>
-  <g stroke="#ffffff" stroke-width="3" stroke-linejoin="round">
-    <path d="M595 5C616 34 617 62 595 89C573 62 574 34 595 5Z" fill="url(#leafGradient)" />
-    <path d="M567 91C538 87 521 71 515 42C546 42 568 57 579 86C575 89 571 91 567 91Z" fill="url(#leafGradient)" />
-    <path d="M623 91C652 87 669 71 675 42C644 42 622 57 611 86C615 89 619 91 623 91Z" fill="url(#leafGradient)" />
+  <g stroke="#ffffff" stroke-width="4" stroke-linejoin="round" filter="url(#shadow)">
+    <path d="M794 4C824 46 826 89 794 130C762 89 764 46 794 4Z" fill="url(#leafGradient)" />
+    <path d="M755 132C713 127 688 104 680 64C725 64 756 86 772 126C766 130 761 132 755 132Z" fill="url(#leafGradient)" />
+    <path d="M833 132C875 127 900 104 908 64C863 64 832 86 816 126C822 130 827 132 833 132Z" fill="url(#leafGradient)" />
   </g>
 </svg>
