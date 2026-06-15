@@ -12,12 +12,8 @@ export function Footer({ onNavigate }: { onNavigate: NavigateFn }) {
       <div className="container footer-grid">
         <div className="footer-brand">
           <button className="brand footer-logo" onClick={() => onNavigate("home")} aria-label="Canvia home">
-            <span className="brand-mark">
-              <span className="brand-leaf">◆</span>
-            </span>
-            <span className="brand-text">
-              <strong>Canvia</strong>
-              <small>Medical Cannabis Clinic</small>
+            <span className="footer-logo-card">
+              <img className="brand-logo footer-brand-logo" src="/logo/canvia-logo-full.png" alt="Canvia Medical Cannabis Clinic" />
             </span>
           </button>
 
