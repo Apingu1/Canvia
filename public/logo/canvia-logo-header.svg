@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 150" role="img" aria-labelledby="title desc">
+  <title id="title">Canvia</title>
+  <desc id="desc">Canvia wordmark with three-leaf icon.</desc>
+  <defs>
+    <linearGradient id="wordGradient" x1="0" y1="0" x2="760" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f473b" />
+      <stop offset="0.48" stop-color="#113d34" />
+      <stop offset="1" stop-color="#0a2f28" />
+    </linearGradient>
+    <linearGradient id="leafGradient" x1="520" y1="0" x2="660" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a4bf82" />
+      <stop offset="0.58" stop-color="#6f945f" />
+      <stop offset="1" stop-color="#294f3f" />
+    </linearGradient>
+  </defs>
+  <rect width="760" height="150" fill="none" />
+  <g stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round" opacity="0.98">
+    <text x="14" y="116" font-family="Inter, Montserrat, Arial, sans-serif" font-size="106" font-weight="300" letter-spacing="35" fill="url(#wordGradient)">CANVIA</text>
+  </g>
+  <g stroke="#ffffff" stroke-width="3" stroke-linejoin="round">
+    <path d="M595 5C616 34 617 62 595 89C573 62 574 34 595 5Z" fill="url(#leafGradient)" />
+    <path d="M567 91C538 87 521 71 515 42C546 42 568 57 579 86C575 89 571 91 567 91Z" fill="url(#leafGradient)" />
+    <path d="M623 91C652 87 669 71 675 42C644 42 622 57 611 86C615 89 619 91 623 91Z" fill="url(#leafGradient)" />
+  </g>
+</svg>
