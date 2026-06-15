@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Canvia icon</title>
+  <desc id="desc">Three-leaf Canvia brand icon.</desc>
+  <defs>
+    <linearGradient id="leafGradient" x1="40" y1="24" x2="208" y2="224" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9fbd7f" />
+      <stop offset="0.55" stop-color="#6f945f" />
+      <stop offset="1" stop-color="#294f3f" />
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#12382f" flood-opacity="0.22" />
+    </filter>
+  </defs>
+  <rect width="256" height="256" fill="none" />
+  <g filter="url(#softShadow)" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+    <path d="M128 22C154 58 155 94 128 128C101 94 102 58 128 22Z" fill="url(#leafGradient)" />
+    <path d="M93 124C55 120 33 99 25 62C66 62 93 82 107 119C102 122 98 124 93 124Z" fill="url(#leafGradient)" />
+    <path d="M163 124C201 120 223 99 231 62C190 62 163 82 149 119C154 122 158 124 163 124Z" fill="url(#leafGradient)" />
+  </g>
+</svg>
