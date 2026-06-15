@@ -19,14 +19,8 @@ export function Header({ activePage, onNavigate }: { activePage: PageKey; onNavi
       </div>
 
       <div className="nav-shell">
-        <button className="brand" onClick={() => handleNav("home")} aria-label="Canvia home">
-          <span className="brand-mark">
-            <span className="brand-leaf">◆</span>
-          </span>
-          <span className="brand-text">
-            <strong>Canvia</strong>
-            <small>Medical Cannabis Clinic</small>
-          </span>
+        <button className="brand brand-image-button" onClick={() => handleNav("home")} aria-label="Canvia home">
+          <img className="brand-logo header-brand-logo" src="/logo/canvia-logo-header.svg" alt="Canvia" />
         </button>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
