@@ -20,7 +20,7 @@ export function Header({ activePage, onNavigate }: { activePage: PageKey; onNavi
 
       <div className="nav-shell">
         <button className="brand brand-image-button" onClick={() => handleNav("home")} aria-label="Canvia home">
-          <img className="brand-logo header-brand-logo" src="/logo/canvia-logo-header.svg" alt="Canvia" />
+          <img className="brand-logo header-brand-logo" src="/logo/canvia-logo-full.png" alt="Canvia" />
         </button>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
