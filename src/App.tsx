@@ -1,6 +1,14 @@
-import { useState } from "react";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate
+} from "react-router-dom";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
+import { pageToPath, pathToPage } from "./data/routes";
 import type { PageKey } from "./types";
 import {
   AboutPage,
@@ -24,36 +32,49 @@ import {
 } from "./pages/Pages";
 
 function App() {
-  const [page, setPage] = useState<PageKey>("home");
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  );
+}
+
+function AppContent() {
+  const routerNavigate = useNavigate();
+  const location = useLocation();
+  const activePage = pathToPage(location.pathname);
 
   function navigate(nextPage: PageKey) {
-    setPage(nextPage);
+    routerNavigate(pageToPath(nextPage));
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   return (
     <div className="app">
-      <Header activePage={page} onNavigate={navigate} />
+      <Header activePage={activePage} onNavigate={navigate} />
 
       <main>
-        {page === "home" && <HomePage onNavigate={navigate} />}
-        {page === "eligibility" && <EligibilityPage />}
-        {page === "how" && <HowItWorksPage onNavigate={navigate} />}
-        {page === "conditions" && <ConditionsPage onNavigate={navigate} />}
-        {page === "information" && <InformationPage />}
-        {page === "pricing" && <PricingPage />}
-        {page === "about" && <AboutPage />}
-        {page === "governance" && <GovernancePage />}
-        {page === "cqc" && <CqcPage />}
-        {page === "referrers" && <ReferrersPage />}
-        {page === "faqs" && <FaqPage />}
-        {page === "contact" && <ContactPage />}
-        {page === "privacy" && <PrivacyPage />}
-        {page === "terms" && <TermsPage />}
-        {page === "complaints" && <ComplaintsPage />}
-        {page === "safeguarding" && <SafeguardingPage />}
-        {page === "accessibility" && <AccessibilityPage />}
-        {page === "disclaimer" && <DisclaimerPage />}
+        <Routes>
+          <Route path={pageToPath("home")} element={<HomePage onNavigate={navigate} />} />
+          <Route path={pageToPath("eligibility")} element={<EligibilityPage />} />
+          <Route path={pageToPath("how")} element={<HowItWorksPage onNavigate={navigate} />} />
+          <Route path={pageToPath("conditions")} element={<ConditionsPage onNavigate={navigate} />} />
+          <Route path={pageToPath("information")} element={<InformationPage />} />
+          <Route path={pageToPath("pricing")} element={<PricingPage />} />
+          <Route path={pageToPath("about")} element={<AboutPage />} />
+          <Route path={pageToPath("governance")} element={<GovernancePage />} />
+          <Route path={pageToPath("cqc")} element={<CqcPage />} />
+          <Route path={pageToPath("referrers")} element={<ReferrersPage />} />
+          <Route path={pageToPath("faqs")} element={<FaqPage />} />
+          <Route path={pageToPath("contact")} element={<ContactPage />} />
+          <Route path={pageToPath("privacy")} element={<PrivacyPage />} />
+          <Route path={pageToPath("terms")} element={<TermsPage />} />
+          <Route path={pageToPath("complaints")} element={<ComplaintsPage />} />
+          <Route path={pageToPath("safeguarding")} element={<SafeguardingPage />} />
+          <Route path={pageToPath("accessibility")} element={<AccessibilityPage />} />
+          <Route path={pageToPath("disclaimer")} element={<DisclaimerPage />} />
+          <Route path="*" element={<Navigate to={pageToPath("home")} replace />} />
+        </Routes>
       </main>
 
       <Footer onNavigate={navigate} />
